@@ -14,6 +14,12 @@ class HomeScreen extends StatelessWidget {
             fontWeight: FontWeight.w700
           ),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search)
+          )
+        ],
       ),
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
