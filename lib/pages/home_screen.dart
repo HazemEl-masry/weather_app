@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/pages/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,7 +17,10 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: ()
+              {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchPage(),));
+              },
               icon: const Icon(Icons.search)
           )
         ],
