@@ -1,10 +1,39 @@
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
-  const SearchPage({Key? key}) : super(key: key);
+
+  String? cityName;
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+            "Search a City",
+          style: TextStyle(
+            fontSize: 25.0,
+            fontWeight: FontWeight.w700
+          ),
+        ),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: TextField(
+            onSubmitted: (value)
+            {
+              cityName = value;
+            },
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 30.0,horizontal: 20.0),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
+              hintText: "search a city",
+              label: const Text("search"),
+              suffixIcon: const Icon(Icons.search)
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
